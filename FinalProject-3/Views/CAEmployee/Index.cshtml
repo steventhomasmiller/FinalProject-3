@@ -1,0 +1,36 @@
+﻿@model IEnumerable<FinalProject_3.Controllers.CAEmployee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div  class="title">
+    <h2>LAZY WORKERS</h2>
+    <p>To be Fired:</p>
+</div>
+<div class="donors">
+    <table>
+        <thead>
+            <tr>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Hire Date</th>
+                <th>Job Title</th>
+                <th>Job Status</th>
+            </tr>
+
+        </thead>
+            <tbody>
+                @foreach (var item in Model)//razor
+                {   <tr>
+                     <td> @Html.DisplayFor(modelItem => item.LastName) </td>
+                    <td> @Html.DisplayFor(modelItem => item.Email) </td>
+                    <td> @Html.DisplayFor(modelItem => item.LastName) </td>
+                    <td> @Html.DisplayFor(modelItem => item.HireDate) </td>
+                    <td> @Html.DisplayFor(modelItem => item.JobTitle) </td>
+                    <td> @Html.DisplayFor(modelItem => item.Status) </td>
+                    </tr>
+                }
+            </tbody>
+    </table>
+</div>
